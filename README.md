@@ -1,1 +1,1 @@
-Demo: https://express-api-demo.herokuapp.com/checkinHistory
+Demo: https://express-api-demo.herokuapp.com/api/checkinHistory
