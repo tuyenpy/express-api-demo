@@ -1,14 +1,25 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const students = [
     {id: 1, name: "Thinh", checkin: []},
     {id: 2, name: "Hung", checkin: []},
     {id: 3, name: "Vuong", checkin: []},
 ];
 
-const checkinHistory = [];
+const checkinHistory = [
+    {
+        id: 1,
+        name: "Thinh",
+        date: "2020-03-16T06:19:01.988Z"
+    },
+    {
+        id: 1,
+        name: "Thinh",
+        date: "2020-04-16T06:19:01.988Z"
+    }
+];
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
