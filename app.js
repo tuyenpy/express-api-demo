@@ -28,8 +28,8 @@ app.get('/api/checkinHistory', (req, res) => {
     res.json(checkinHistory);
 });
 
-app.post('/api/qrcode/:id', (req, res) => {
-    let id = parseInt(req.params.id);
+app.post('/api/qrcode', (req, res) => {
+    let id = parseInt(req.body.id);
     let date = new Date();
     let user = students.filter(student => student.id == id)[0];
     students.map(student => {
